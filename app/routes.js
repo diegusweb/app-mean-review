@@ -1,7 +1,8 @@
 var Persona = require('./modelo/persona');
-var Controller = require('./controller');
+var Controller = require ('./controller');
 
-module.exports = function(app){
+module.exports = function(app) {
+
 	// devolver todos los Personas
 	app.get('/api/persona', Controller.getPersona);
 	// Crear una nueva Persona

@@ -8,7 +8,7 @@ exports.getPersona = function(req, res){
 		res.json(pesona);
 			
 	});
-}
+};
 
 exports.setPersona = function(req, res){
 	Persona.create(
@@ -23,5 +23,4 @@ exports.setPersona = function(req, res){
 				res.json(persona);
 			});
 		});
-	}
-}
+};
