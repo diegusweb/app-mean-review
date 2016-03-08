@@ -1,0 +1,23 @@
+{
+  "name": "app-mean-review",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegusweb/app-mean-review.git"
+  },
+  "author": "diegusweb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegusweb/app-mean-review/issues"
+  },
+  "dependencies" : {
+    "express"    : "~3.4.4",
+    "mongoose"   : "~3.6.2"
+  },
+  "homepage": "https://github.com/diegusweb/app-mean-review#readme"
+}
