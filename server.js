@@ -1,19 +1,21 @@
-var express = require('express');
-var app     = express();
-var mongoose = require('mongoose');
-var port     = process.env.PORT || 8080;
+var express = require("express"),  
+    app = express(),
+    bodyParser  = require("body-parser"),
+    methodOverride = require("method-override");
+    mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/MeanExample');
+app.use(bodyParser.urlencoded({ extended: false }));  
+app.use(bodyParser.json());  
+app.use(methodOverride());
 
-app.configure(function(){
-	app.use(express.static(__dirname + '/angular'));
-	app.use(express.logger('dev'));
-	app.use(express.bodyParser());
-	app.use(express.methodOverride());
+var router = express.Router();
+
+router.get('/', function(req, res) {  
+   res.send("Hello World!");
 });
 
-require('./app/routes.js');
+app.use(router);
 
-app.listen(port);
-
-console.log("App por el puerto " + port);
+app.listen(3000, function() {  
+  console.log("Node server running on http://localhost:3000");
+});
